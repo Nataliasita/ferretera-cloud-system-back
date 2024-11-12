@@ -79,9 +79,28 @@ Si el id proporcionado corresponde a un usuario existente en la base de datos, l
 
 #### Ejemplo de respuesta:
 
+```json
+{
+    "id":"1",
+    "nombre":"Juan Perez",
+    "email":"juan.perez@example.com",
+    "celular":"3252463656",
+    "rol":"empleado almacen",
+    "permisos":["crear_usuario", "realizar_ordenes"],
+    "fecha_creacion": "2023-08-15T14:30:00Z",
+    "estado":"activo"
+}
+```
+---
+### 4 . **Modificar un Usuario**
+- **Método**: `PUT`
+- **URL**: `/user_management`
+- **Descripción**: Actualiza un usuario en la base de datos.
+- **Cuerpo de la solicitud** (JSON):
     ```json
     {
-        "nombre":"Juan Perez",
+        "id": "G67HPrytQVcDqyO0cRiK",
+        "nombre":"Juan Perez modificado",
         "email":"juan.perez@example.com",
         "celular":"3252463656",
         "rol":"empleado almacen",
@@ -90,4 +109,30 @@ Si el id proporcionado corresponde a un usuario existente en la base de datos, l
         "estado":"activo"
     }
     ```
-
+- **Respuesta**:
+    - **Código 200 (actualizado)**: Usuario actualizado exitosamente.
+    - **Cuerpo de la respuesta**:
+    ```json
+    {
+      "message": "Usuario actualizado"
+    }
+    ```
+---
+### 5 . **Eliminar un Usuario**
+- **Método**: `DELETE`
+- **URL**: `/user_management`
+- **Descripción**: Elimina un usuario en la base de datos.
+- **Cuerpo de la solicitud** (JSON):
+    ```json
+    {
+        "id": "G67HPrytQVcDqyO0cRiK"
+    }
+    ```
+- **Respuesta**:
+    - **Código 200 (actualizado)**: Usuario eliminado exitosamente.
+    - **Cuerpo de la respuesta**:
+    ```json
+    {
+      "message": "Usuario eliminado"
+    }
+    ```

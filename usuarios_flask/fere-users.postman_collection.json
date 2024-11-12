@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "331d0eeb-1185-48e3-ae5a-c26ac551fe4e",
+		"name": "fere-users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39370632"
+	},
+	"item": [
+		{
+			"name": "usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://us-east4-cbse-2024ii-438623.cloudfunctions.net/funcion_prueba",
+					"protocol": "https",
+					"host": [
+						"us-east4-cbse-2024ii-438623",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"funcion_prueba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Juan Perez\",\r\n    \"email\":\"juan.perez@example.com\",\r\n    \"celular\":\"3252463656\",\r\n    \"rol\":\"empleado almacen\",\r\n    \"permisos\":[\"crear_usuario\", \"realizar_ordenes\"],\r\n    \"fecha_creacion\": \"2023-08-15T14:30:00Z\",\r\n    \"estado\":\"activo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-east4-cbse-2024ii-438623.cloudfunctions.net/funcion_prueba",
+					"protocol": "https",
+					"host": [
+						"us-east4-cbse-2024ii-438623",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"funcion_prueba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit_user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"G67HPrytQVcDqyO0cRiK\",\r\n    \"nombre\":\"Juan Perez modificado\",\r\n    \"email\":\"juan.perez@example.com\",\r\n    \"celular\":\"3252463656\",\r\n    \"rol\":\"empleado almacen\",\r\n    \"permisos\":[\"crear_usuario\", \"realizar_ordenes\"],\r\n    \"fecha_creacion\": \"2023-08-15T14:30:00Z\",\r\n    \"estado\":\"activo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-east4-cbse-2024ii-438623.cloudfunctions.net/funcion_prueba",
+					"protocol": "https",
+					"host": [
+						"us-east4-cbse-2024ii-438623",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"funcion_prueba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"7pQbj1tAJR9HidqCcRu0\",\r\n    \"nombre\":\"Juan Perez modificado\",\r\n    \"email\":\"juan.perez@example.com\",\r\n    \"celular\":\"3252463656\",\r\n    \"rol\":\"empleado almacen\",\r\n    \"permisos\":[\"crear_usuario\", \"realizar_ordenes\"],\r\n    \"fecha_creacion\": \"2023-08-15T14:30:00Z\",\r\n    \"estado\":\"activo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-east4-cbse-2024ii-438623.cloudfunctions.net/funcion_prueba",
+					"protocol": "https",
+					"host": [
+						"us-east4-cbse-2024ii-438623",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"funcion_prueba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usuarios_byid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://us-east4-cbse-2024ii-438623.cloudfunctions.net/funcion_prueba?id=1",
+					"protocol": "https",
+					"host": [
+						"us-east4-cbse-2024ii-438623",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"funcion_prueba"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

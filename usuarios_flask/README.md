@@ -129,7 +129,7 @@ Si el id proporcionado corresponde a un usuario existente en la base de datos, l
     }
     ```
 - **Respuesta**:
-    - **Código 200 (actualizado)**: Usuario eliminado exitosamente.
+    - **Código 200 (eliminado)**: Usuario eliminado exitosamente.
     - **Cuerpo de la respuesta**:
     ```json
     {
